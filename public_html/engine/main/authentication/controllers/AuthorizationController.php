@@ -8,6 +8,7 @@ use engine\base\controllers\BaseController;
 use engine\base\controllers\Singleton;
 use engine\base\exceptions\AuthException;
 use engine\main\authentication\libs\php_jwt\JWT;
+use engine\main\authentication\libs\php_jwt\RT;
 use engine\main\authentication\models\MainModel;
 
 
@@ -25,6 +26,7 @@ class AuthorizationController extends AuthenticationController
     private int $_iat = 1356999524;
     private int $_nbf = 1357000000;
 
+    private array $_response;
 
     /**
      * Конструктор
@@ -41,8 +43,7 @@ class AuthorizationController extends AuthenticationController
      */
     public function outputData()
     {
-        //return $this->render($_SERVER['DOCUMENT_ROOT'] . '/templates/default/login');
-        echo 2;
+        return json_encode($this->_response);
     }
 
 
@@ -64,10 +65,12 @@ class AuthorizationController extends AuthenticationController
 
             $tokens = $this->_generateTokens($userData);
 
-            echo json_encode($tokens);
+            $this->_response = $tokens;
 
         } catch (AuthException $e) {
-            echo 123;
+            $this->_response = [
+                'error' => $e
+            ];
             //echo $e;
         }
 
@@ -76,28 +79,65 @@ class AuthorizationController extends AuthenticationController
 
     private function _generateTokens(Array $userData)
     {
+        $now = new \DateTime('now', new \DateTimeZone('Europe/Moscow'));
+
+        $userData['expireJwt'] = $now->modify('+1 minutes')->getTimestamp();
+        $userData['expireRt'] = $now->modify('+2 minutes')->getTimestamp();
+
         $jwt = $this->_generateJwt($userData);
-        return $jwt;
+        $rt = $this->_generateRt($userData);
+
+        $tokens = [
+            'access_token' => $jwt,
+            'refresh_token' => $rt,
+            'expires_in' => 124234149563
+        ];
+
+        return $tokens;
     }
 
 
-    private function _generateJwt(Array $userData)
+    /**
+     * Генерация JWT
+     * @param array $userData
+     * @return String
+     */
+    private function _generateJwt(Array $userData): String
     {
         $token = array(
             "iss" => $this->_iss,
             "aud" => $this->_aud,
             "iat" => $this->_iat,
             "nbf" => $this->_nbf,
-            "exp" => 1690477162,
+            "exp" => $userData['expireJwt'],
             "data" => array(
                 "id" => $userData['id'],
                 "name" => $userData['name'],
             )
         );
-        $jwt = JWT::encode($token, $this->_key, 'HS256');
 
-        return $jwt;
+        return JWT::encode($token, $this->_key, 'HS256');
     }
+
+
+    private function _generateRt(Array $userData): String
+    {
+        $token = array(
+            "iss" => $this->_iss,
+            "aud" => $this->_aud,
+            "iat" => $this->_iat,
+            "nbf" => $this->_nbf,
+            "exp" => $userData['expireRt'],
+            "data" => array(
+                "id" => $userData['id'],
+                "name" => $userData['name'],
+            )
+        );
+
+        return RT::encode($token, $this->_key, 'HS256');
+    }
+
+
 
 
 

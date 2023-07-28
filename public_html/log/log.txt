@@ -62,3 +62,7 @@ Fault: 28-07-2023 22:47:06 - Не верное имя файла для подк
 fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
  In line 35
 
+Fault: 28-07-2023 23:06:49 - Error
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 23
+
