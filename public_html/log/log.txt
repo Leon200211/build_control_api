@@ -1,0 +1,64 @@
+Fault: 28-07-2023 21:57:10 - Не верное имя файла для подключения - engine/main/authentication/controllers/MainController
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
+ In line 35
+
+Fault: 28-07-2023 21:58:37 - Не верное имя файла для подключения - engine/main/authentication/controllers/MainController
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
+ In line 35
+
+Fault: 28-07-2023 22:29:08 - Error
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 23
+
+Fault: 28-07-2023 22:29:48 - Error2
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 35
+
+Fault: 28-07-2023 22:30:12 - Error
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 23
+
+Fault: 28-07-2023 22:31:44 - Error
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 23
+
+Fault: 28-07-2023 22:31:56 - Error
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 23
+
+Fault: 28-07-2023 22:32:08 - Error
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 23
+
+Fault: 28-07-2023 22:40:30 - Error
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 23
+
+Fault: 28-07-2023 22:40:49 - Не верное имя файла для подключения - Firebase/JWT/JWT
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
+ In line 35
+
+Fault: 28-07-2023 22:41:14 - Не верное имя файла для подключения - Firebase/JWT/JWT
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
+ In line 35
+
+Fault: 28-07-2023 22:41:34 - Не верное имя файла для подключения - Firebase/JWT/JWT
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
+ In line 35
+
+Fault: 28-07-2023 22:42:30 - Не верное имя файла для подключения - Firebase/JWT/JWT
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
+ In line 35
+
+Fault: 28-07-2023 22:45:06 - Не верное имя файла для подключения - Firebase/JWT/JWT
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
+ In line 35
+
+Fault: 28-07-2023 22:45:36 - Не верное имя файла для подключения - Firebase/JWT/JWT
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
+ In line 35
+
+Fault: 28-07-2023 22:47:06 - Не верное имя файла для подключения - Firebase/JWT/JWT
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
+ In line 35
+

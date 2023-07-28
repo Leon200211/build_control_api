@@ -31,6 +31,12 @@ class Settings
             'action' => 'index',
         ],
 
+        '/api/auth/login' => [
+            'controller' => 'Authorization',
+            'controllerPath' => '\engine\main\authentication\controllers\\',
+            'action' => 'login',
+        ]
+
     ];
 
 

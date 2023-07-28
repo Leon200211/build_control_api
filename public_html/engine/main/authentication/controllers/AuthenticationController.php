@@ -6,7 +6,6 @@ namespace engine\main\authentication\controllers;
 use engine\main\authentication\controllers\AccessRightsController;
 use engine\base\controllers\BaseController;
 use engine\main\authentication\models\MainModel;
-use engine\main\notificationSystem\controllers\Notification;
 
 
 /**
@@ -23,7 +22,7 @@ abstract class AuthenticationController extends BaseController
     {
 
         if(!$this->model) $this->model = MainModel::getInstance();
-        if(!$this->accessRightsChecker) $this->accessRightsChecker = AccessRightsController::getInstance();
+        //if(!$this->accessRightsChecker) $this->accessRightsChecker = AccessRightsController::getInstance();
 
         // запрет на кеширование
         $this->sendNoCacheHeaders();

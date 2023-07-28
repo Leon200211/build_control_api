@@ -6,7 +6,10 @@ namespace engine\main\authentication\controllers;
 
 use engine\base\controllers\BaseController;
 use engine\base\controllers\Singleton;
+use engine\base\exceptions\AuthException;
+use engine\main\authentication\libs\php_jwt\JWT;
 use engine\main\authentication\models\MainModel;
+
 
 
 /**
@@ -16,20 +19,19 @@ use engine\main\authentication\models\MainModel;
 class AuthorizationController extends AuthenticationController
 {
 
-    protected $title = 'Вход';
+    private string $_key = '1111';
+    private string $_iss = 'http://any-site.org';
+    private string $_aud = 'http://any-site.org';
+    private int $_iat = 1356999524;
+    private int $_nbf = 1357000000;
+
 
     /**
-     * проверка на авторизацию
-     * @return void
+     * Конструктор
      */
-    public function index()
+    public function __construct()
     {
-        if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            $this->login();
-        }else if($_SERVER['REQUEST_METHOD'] === 'GET'){
-            $this->logout();
-        }
-
+        $this->execBase();
     }
 
 
@@ -39,19 +41,75 @@ class AuthorizationController extends AuthenticationController
      */
     public function outputData()
     {
-        return $this->render($_SERVER['DOCUMENT_ROOT'] . '/templates/default/login');
+        //return $this->render($_SERVER['DOCUMENT_ROOT'] . '/templates/default/login');
+        echo 2;
     }
+
+
+    public function login()
+    {
+        $username = 'root';
+        $password = '$2y$10$mvH.8LM6dtENkJSjVidD6ujovmJbmisTL7p38f1MlchUFsIkD1ksy';
+        $fingerprint = '';
+
+        $loginData = [
+            'username' => $username,
+            'password' => $password,
+        ];
+
+
+        try {
+
+            $userData = $this->model->checkAuthentication($loginData);
+
+            $tokens = $this->_generateTokens($userData);
+
+            echo json_encode($tokens);
+
+        } catch (AuthException $e) {
+            echo 123;
+            //echo $e;
+        }
+
+
+    }
+
+    private function _generateTokens(Array $userData)
+    {
+        $jwt = $this->_generateJwt($userData);
+        return $jwt;
+    }
+
+
+    private function _generateJwt(Array $userData)
+    {
+        $token = array(
+            "iss" => $this->_iss,
+            "aud" => $this->_aud,
+            "iat" => $this->_iat,
+            "nbf" => $this->_nbf,
+            "exp" => 1690477162,
+            "data" => array(
+                "id" => $userData['id'],
+                "name" => $userData['name'],
+            )
+        );
+        $jwt = JWT::encode($token, $this->_key, 'HS256');
+
+        return $jwt;
+    }
+
 
 
     /**
      * создание сессии
      * @return void
      */
-    public function login()
+    public function login2()
     {
         if(!$this->model) $this->model = MainModel::getInstance();
 
-        // ищем пользователя при  авторизации
+        // ищем пользователя при авторизации
         $user = $this->model->read('users', [
             'where' => [
                 'login' => $_POST['username']
