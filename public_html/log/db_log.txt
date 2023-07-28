@@ -1,0 +1,4 @@
+Fault: 28-07-2023 22:26:36 - Ошибка в SQL запросе: SELECT users.`id` FROM users  WHERE users.login='root' - 1046 No database selected
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\models\BaseModel.php
+ In line 58
+
