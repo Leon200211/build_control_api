@@ -2,3 +2,15 @@ Fault: 28-07-2023 22:26:36 - Ошибка в SQL запросе: SELECT users.`i
 fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\models\BaseModel.php
  In line 58
 
+Fault: 29-07-2023 17:03:37 - Ошибка в SQL запросе: INSERT INTO refreshSessions (`userId`,`refreshToken`,`expiresIn`,`fingerprint`) VALUE ('1','eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYW55LXNpdGUub3JnIiwiYXVkIjoiaHR0cDovL2FueS1zaXRlLm9yZyIsImlhdCI6MTM1Njk5OTUyNCwibmJmIjoxMzU3MDAwMDAwLCJleHAiOjE2OTA2Mzk0MjAsImRhdGEiOnsiaWQiOiIxIiwibmFtZSI6Ilx1MDQxOFx1MDQzMlx1MDQzMFx1MDQzZFx1MDQzZVx1MDQzMiBcdTA0MThcdTA0MzJcdTA0MzBcdTA0M2QgXHUwNDE4XHUwNDMyXHUwNDMwXHUwNDNkXHUwNDNlXHUwNDMyXHUwNDM4XHUwNDQ3In19.sRR56VYM6FcL6793LvQbeL-YCZqkrprUE3rvYH5ROTU','1690639420','1') - 1366 Incorrect integer value: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYW55LXNpdGUub3JnIiwiYXVkIjoiaHR0cDovL2FueS1zaXRlLm9yZyIsImlhdCI6MTM1Njk' for column 'refreshToken' at row 1
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\models\BaseModel.php
+ In line 58
+
+Fault: 29-07-2023 17:04:23 - Ошибка в SQL запросе: INSERT INTO refreshSessions (`userId`,`refreshToken`,`expiresIn`,`fingerprint`) VALUE ('1','eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYW55LXNpdGUub3JnIiwiYXVkIjoiaHR0cDovL2FueS1zaXRlLm9yZyIsImlhdCI6MTM1Njk5OTUyNCwibmJmIjoxMzU3MDAwMDAwLCJleHAiOjE2OTA2Mzk0NjYsImRhdGEiOnsiaWQiOiIxIiwibmFtZSI6Ilx1MDQxOFx1MDQzMlx1MDQzMFx1MDQzZFx1MDQzZVx1MDQzMiBcdTA0MThcdTA0MzJcdTA0MzBcdTA0M2QgXHUwNDE4XHUwNDMyXHUwNDMwXHUwNDNkXHUwNDNlXHUwNDMyXHUwNDM4XHUwNDQ3In19.1F2rP4QY09zYVxVpJSbVS3jK1Ix5YvJBF6aRRYNPYuE','1690639466','1') - 1364 Field 'id' doesn't have a default value
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\models\BaseModel.php
+ In line 58
+
+Fault: 29-07-2023 17:04:58 - Ошибка в SQL запросе: INSERT INTO refreshSessions (`userId`,`refreshToken`,`expiresIn`,`fingerprint`) VALUE ('1','eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYW55LXNpdGUub3JnIiwiYXVkIjoiaHR0cDovL2FueS1zaXRlLm9yZyIsImlhdCI6MTM1Njk5OTUyNCwibmJmIjoxMzU3MDAwMDAwLCJleHAiOjE2OTA2Mzk1MDEsImRhdGEiOnsiaWQiOiIxIiwibmFtZSI6Ilx1MDQxOFx1MDQzMlx1MDQzMFx1MDQzZFx1MDQzZVx1MDQzMiBcdTA0MThcdTA0MzJcdTA0MzBcdTA0M2QgXHUwNDE4XHUwNDMyXHUwNDMwXHUwNDNkXHUwNDNlXHUwNDMyXHUwNDM4XHUwNDQ3In19.XEM03Yrq1a3sSyqZ1il4ATc8RrhZeaK3PmSmbqye-R4','1690639501','1') - 1364 Field 'ua' doesn't have a default value
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\models\BaseModel.php
+ In line 58
+

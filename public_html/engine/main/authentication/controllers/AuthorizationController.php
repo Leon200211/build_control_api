@@ -61,9 +61,14 @@ class AuthorizationController extends AuthenticationController
 
         try {
 
+            // проверят подлинность логина/пароля
             $userData = $this->model->checkAuthentication($loginData);
 
+            // Генерируем токены
             $tokens = $this->_generateTokens($userData);
+
+            // Проверяем refreshSessions и делаем запись
+            $this->model->RefreshSession($userData, $tokens);
 
             $this->_response = $tokens;
 
@@ -77,12 +82,13 @@ class AuthorizationController extends AuthenticationController
 
     }
 
+
     private function _generateTokens(Array $userData)
     {
         $now = new \DateTime('now', new \DateTimeZone('Europe/Moscow'));
 
-        $userData['expireJwt'] = $now->modify('+1 minutes')->getTimestamp();
-        $userData['expireRt'] = $now->modify('+2 minutes')->getTimestamp();
+        $userData['expireJwt'] = $now->modify('+1 seconds')->getTimestamp();
+        $userData['expireRt'] = $now->modify('+2 seconds')->getTimestamp();
 
         $jwt = $this->_generateJwt($userData);
         $rt = $this->_generateRt($userData);
@@ -90,7 +96,7 @@ class AuthorizationController extends AuthenticationController
         $tokens = [
             'access_token' => $jwt,
             'refresh_token' => $rt,
-            'expires_in' => 124234149563
+            'expires_in' => $userData['expireRt'],
         ];
 
         return $tokens;
