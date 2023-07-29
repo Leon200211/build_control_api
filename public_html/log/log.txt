@@ -126,3 +126,7 @@ Fault: 29-07-2023 18:09:48 - Не верное имя файла для подк
 fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
  In line 35
 
+Fault: 29-07-2023 18:33:44 - Нет такой ref
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 137
+

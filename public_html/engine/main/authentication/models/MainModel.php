@@ -16,6 +16,12 @@ class MainModel extends BaseModel
     use Singleton;
 
 
+    /**
+     * Проверка данных пользователя
+     * @param array $loginData
+     * @return Array
+     * @throws AuthException
+     */
     public function checkAuthentication(Array $loginData): Array
     {
         // ищем пользователя
@@ -37,6 +43,12 @@ class MainModel extends BaseModel
 
     }
 
+
+    /**
+     * Проверка на существование пользователя
+     * @param String $userName
+     * @return bool
+     */
     private function _userExists(String $userName): bool
     {
         $userId = $this->read('users', [
@@ -52,6 +64,12 @@ class MainModel extends BaseModel
     }
 
 
+    /**
+     * Метод по проверке и добавлению записи в refreshSessions
+     * @param array $userData
+     * @param array $tokens
+     * @return void
+     */
     public function refreshSession(Array $userData, Array $tokens): void
     {
         $refreshSessionsCount = $this->read('refreshSessions', [
@@ -66,6 +84,30 @@ class MainModel extends BaseModel
     }
 
 
+    /**
+     * Метод по созданию записи в refreshSessions
+     * @param array $userData
+     * @param array $tokens
+     * @return void
+     */
+    private function _createRefreshSession(Array $userData, Array $tokens): void
+    {
+        $this->add('refreshSessions', [
+            'fields' => [
+                'userId' => $userData['id'],
+                'refreshToken' => $tokens['refresh_token'],
+                'expiresIn' => $tokens['rt_expires_in'],
+                'fingerprint' => $userData['id']
+            ]
+        ]);
+    }
+
+
+    /**
+     * Метод для удаления всех RefreshSession определенного пользователя
+     * @param int $userId
+     * @return void
+     */
     private function _destroyRefreshSession(int $userId): void
     {
         $this->delete('refreshSessions', [
@@ -74,19 +116,12 @@ class MainModel extends BaseModel
     }
 
 
-    private function _createRefreshSession(Array $userData, Array $tokens): void
-    {
-        $this->add('refreshSessions', [
-            'fields' => [
-                'userId' => $userData['id'],
-                'refreshToken' => $tokens['refresh_token'],
-                'expiresIn' => $tokens['expires_in_rt'],
-                'fingerprint' => $userData['id']
-            ]
-        ]);
-    }
-
-
+    /**
+     * Проверка RefreshSession у токена
+     * @param array $data
+     * @return bool
+     * @throws AuthException
+     */
     public function checkRefreshSession(Array $data): bool
     {
         $refreshSession = $this->read('refreshSessions', [
@@ -102,9 +137,7 @@ class MainModel extends BaseModel
             throw new AuthException('Нет такой ref');
         }
 
-        $this->delete('refreshSessions', [
-            'where' => ['id' => $refreshSession[0]['id']]
-        ]);
+        $this->_deleteRefreshSession($refreshSession[0]['id']);
 
         if ($refreshSession[0]['expiresIn'] < time()) {
             throw new AuthException('Вышло время');
@@ -114,6 +147,12 @@ class MainModel extends BaseModel
     }
 
 
+    /**
+     * Метод для удаления Refresh токена
+     * @param array $data
+     * @return bool
+     * @throws AuthException
+     */
     public function deleteRefreshSession(Array $data): bool
     {
         $refreshSession = $this->read('refreshSessions', [
@@ -129,15 +168,32 @@ class MainModel extends BaseModel
             throw new AuthException('Нет такой ref');
         }
 
-        $this->delete('refreshSessions', [
-            'where' => ['id' => $refreshSession[0]['id']]
-        ]);
+        $this->_deleteRefreshSession($refreshSession[0]['id']);
 
         return true;
     }
 
 
-    public function getUserData(int $userId)
+    /**
+     * Метод для удаления RefreshSession
+     * @param int $id
+     * @return void
+     */
+    private function _deleteRefreshSession(int $id): void
+    {
+        $this->delete('refreshSessions', [
+            'where' => ['id' => $id]
+        ]);
+    }
+
+
+    /**
+     * Метод для получения данных пользователя
+     * @param int $userId
+     * @return mixed
+     * @throws AuthException
+     */
+    public function getUserData(int $userId): Array
     {
         $userData = $this->read('users', [
             'fields' => ['id', 'name', 'password'],
