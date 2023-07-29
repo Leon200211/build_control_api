@@ -1,5 +1,6 @@
 # Документация по api
 
+## Авторизация
 
 ## <span style="color:#347FC4">**POST**</span> api/auth/login - Метод для авторизации
 
@@ -91,5 +92,7 @@ fingerprint - хеш сгенерированный js'ом на базе нек
 }
 ```
 
+
+***<span style="color:red">Во всех остальных запросах access_token передается как Bearer</span>***
 
 ### 

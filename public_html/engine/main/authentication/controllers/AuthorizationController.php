@@ -132,8 +132,6 @@ class AuthorizationController extends AuthenticationController
             ]);
             exit();
         }
-
-
     }
 
 
@@ -215,7 +213,7 @@ class AuthorizationController extends AuthenticationController
         $tokens = [
             'access_token' => $jwt,
             'refresh_token' => $rt,
-            'jwt_expires_in' => $userData['expireJwt'],
+            'at_expires_in' => $userData['expireJwt'],
             'rt_expires_in' => $userData['expireRt'],
         ];
 
