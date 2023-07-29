@@ -26,10 +26,28 @@ class Settings
     private $routes = [
 
         '/' => [
-            'controller' => 'main',
+            'controller' => 'Authorization',
             'controllerPath' => '\engine\main\authentication\controllers\\',
-            'action' => 'index',
+            'action' => 'validateToken',
         ],
+
+        '/api/auth/login' => [
+            'controller' => 'Authorization',
+            'controllerPath' => '\engine\main\authentication\controllers\\',
+            'action' => 'login',
+        ],
+
+        '/api/auth/refresh-tokens' => [
+            'controller' => 'Authorization',
+            'controllerPath' => '\engine\main\authentication\controllers\\',
+            'action' => 'refreshTokens',
+        ],
+
+        '/api/auth/logout' => [
+            'controller' => 'Authorization',
+            'controllerPath' => '\engine\main\authentication\controllers\\',
+            'action' => 'logout',
+        ]
 
     ];
 
