@@ -130,3 +130,275 @@ Fault: 29-07-2023 18:33:44 - Нет такой ref
 fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
  In line 137
 
+Fault: 29-07-2023 19:53:00 - Error
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 29
+
+Fault: 29-07-2023 19:53:18 - Error
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 29
+
+Fault: 29-07-2023 19:54:04 - Error
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 29
+
+Fault: 29-07-2023 19:54:04 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 19:59:14 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 61
+
+Fault: 29-07-2023 20:00:08 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 61
+
+Fault: 29-07-2023 20:00:22 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 61
+
+Fault: 29-07-2023 20:01:51 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 61
+
+Fault: 29-07-2023 20:02:04 - Error
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 29
+
+Fault: 29-07-2023 20:02:23 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 61
+
+Fault: 29-07-2023 20:02:23 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 20:02:56 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 61
+
+Fault: 29-07-2023 20:02:56 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 20:03:25 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 61
+
+Fault: 29-07-2023 20:03:25 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 20:03:45 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 61
+
+Fault: 29-07-2023 20:04:37 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 61
+
+Fault: 29-07-2023 20:05:17 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 61
+
+Fault: 29-07-2023 20:05:17 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 20:06:20 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 75
+
+Fault: 29-07-2023 20:06:20 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 20:06:40 - Не верное имя файла для подключения - engine/main/authentication/controllers/Exception
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
+ In line 35
+
+Fault: 29-07-2023 20:06:40 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 20:06:58 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 20:08:23 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 64
+
+Fault: 29-07-2023 20:08:23 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 20:08:40 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 64
+
+Fault: 29-07-2023 20:08:55 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 64
+
+Fault: 29-07-2023 20:08:55 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 75
+
+Fault: 29-07-2023 20:09:28 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 64
+
+Fault: 29-07-2023 20:09:52 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 61
+
+Fault: 29-07-2023 20:10:11 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 64
+
+Fault: 29-07-2023 20:10:22 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 64
+
+Fault: 29-07-2023 20:10:46 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 64
+
+Fault: 29-07-2023 20:10:53 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 64
+
+Fault: 29-07-2023 20:11:03 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 64
+
+Fault: 29-07-2023 20:11:30 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 62
+
+Fault: 29-07-2023 20:11:53 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 62
+
+Fault: 29-07-2023 20:12:02 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 62
+
+Fault: 29-07-2023 20:17:40 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 62
+
+Fault: 29-07-2023 20:29:48 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 62
+
+Fault: 29-07-2023 20:29:57 - Error
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 29
+
+Fault: 29-07-2023 20:30:17 - Error
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 29
+
+Fault: 29-07-2023 20:30:57 - Error
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 29
+
+Fault: 29-07-2023 20:32:29 - Error
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 29
+
+Fault: 29-07-2023 20:32:32 - Отсутствует параметр fingerprint
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 64
+
+Fault: 29-07-2023 20:34:51 - Неверный логин или пароль
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 29
+
+Fault: 29-07-2023 20:37:04 - Неверный логин или пароль
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 29
+
+Fault: 29-07-2023 20:39:40 - Неверный логин или пароль
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 29
+
+Fault: 29-07-2023 20:56:37 - INVALID_REFRESH_SESSION
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 139
+
+Fault: 29-07-2023 20:58:49 - INVALID_REFRESH_SESSION
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 139
+
+Fault: 29-07-2023 21:03:16 - INVALID_REFRESH_SESSION
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 144
+
+Fault: 29-07-2023 21:04:05 - INVALID_REFRESH_SESSION
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 144
+
+Fault: 29-07-2023 21:06:10 - INVALID_REFRESH_SESSION
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 144
+
+Fault: 29-07-2023 21:07:20 - INVALID_REFRESH_SESSION
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 144
+
+Fault: 29-07-2023 21:26:15 - Отсутствует параметр user_id
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 101
+
+Fault: 29-07-2023 21:26:49 - Отсутствует параметр user_id
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 102
+
+Fault: 29-07-2023 21:27:02 - Отсутствует параметр user_id
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 102
+
+Fault: 29-07-2023 21:27:22 - Отсутствует параметр refresh_token
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 103
+
+Fault: 29-07-2023 21:28:02 - Отсутствует параметр fingerprint
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 104
+
+Fault: 29-07-2023 21:32:00 - Отсутствует параметр user_id
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 147
+
+Fault: 29-07-2023 21:32:11 - Отсутствует параметр refresh_token
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 148
+
+Fault: 29-07-2023 21:32:49 - Отсутствует параметр fingerprint
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 149
+
+Fault: 29-07-2023 21:33:05 - INVALID_REFRESH_SESSION
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 168
+
+Fault: 29-07-2023 21:34:30 - INVALID_REFRESH_SESSION
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 168
+
+Fault: 29-07-2023 21:34:46 - INVALID_REFRESH_SESSION
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 168
+
+Fault: 29-07-2023 21:35:43 - INVALID_REFRESH_SESSION
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 168
+
+Fault: 29-07-2023 21:39:20 - INVALID_REFRESH_SESSION
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 168
+

@@ -26,7 +26,7 @@ class MainModel extends BaseModel
     {
         // ищем пользователя
         if (!$this->_userExists($loginData['username'])) {
-            throw new AuthException('Error');
+            throw new AuthException('Неверный логин или пароль');
         }
 
         $userData = $this->read('users', [
@@ -38,7 +38,7 @@ class MainModel extends BaseModel
             return $userData;
         } else {
             // попытка подбора пароля
-            throw new AuthException('Error2');
+            throw new AuthException('Неверный логин или пароль');
         }
 
     }
@@ -134,13 +134,13 @@ class MainModel extends BaseModel
         ]);
 
         if (empty($refreshSession)) {
-            throw new AuthException('Нет такой ref');
+            throw new AuthException('INVALID_REFRESH_SESSION');
         }
 
         $this->_deleteRefreshSession($refreshSession[0]['id']);
 
         if ($refreshSession[0]['expiresIn'] < time()) {
-            throw new AuthException('Вышло время');
+            throw new AuthException('TOKEN_EXPIRED');
         }
 
         return true;
@@ -165,7 +165,7 @@ class MainModel extends BaseModel
         ]);
 
         if (empty($refreshSession)) {
-            throw new AuthException('Нет такой ref');
+            throw new AuthException('INVALID_REFRESH_SESSION');
         }
 
         $this->_deleteRefreshSession($refreshSession[0]['id']);
@@ -203,7 +203,7 @@ class MainModel extends BaseModel
         if (!empty($userData)) {
             return $userData[0];
         } else {
-            throw new AuthException('Error2');
+            throw new AuthException('Ошибка авторизации');
         }
     }
 

@@ -12,7 +12,7 @@ trait BaseMethods
 {
 
     /**
-     * метод проверки, есть ли одна из наших ролей в списке
+     * Метод проверки, есть ли одна из наших ролей в списке
      * @param $roles
      * @return bool
      */
@@ -39,7 +39,7 @@ trait BaseMethods
 
 
     /**
-     * метод для очистки сток
+     * Метод для очистки сток
      * @param $str
      * @return array|string
      */
@@ -59,7 +59,7 @@ trait BaseMethods
 
 
     /**
-     * метод для отчистки числовых данных
+     * Метод для отчистки числовых данных
      * @param $num
      * @return float|int
      */
@@ -70,7 +70,7 @@ trait BaseMethods
 
 
     /**
-     * проверка на post запрос
+     * Проверка на post запрос
      * @return bool
      */
     protected function isPost()
@@ -80,7 +80,7 @@ trait BaseMethods
 
 
     /**
-     * проверка на ajax
+     * Проверка на ajax
      * @return bool
      */
     protected function isAjax()
