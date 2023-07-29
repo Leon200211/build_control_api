@@ -7,7 +7,9 @@ namespace engine\main\authentication\controllers;
 use engine\base\controllers\BaseController;
 use engine\base\controllers\Singleton;
 use engine\base\exceptions\AuthException;
+use engine\main\authentication\libs\php_jwt\ExpiredException;
 use engine\main\authentication\libs\php_jwt\JWT;
+use engine\main\authentication\libs\php_jwt\Key;
 use engine\main\authentication\libs\php_jwt\RT;
 use engine\main\authentication\models\MainModel;
 
@@ -58,9 +60,7 @@ class AuthorizationController extends AuthenticationController
             'password' => $password,
         ];
 
-
         try {
-
             // проверят подлинность логина/пароля
             $userData = $this->model->checkAuthentication($loginData);
 
@@ -68,18 +68,89 @@ class AuthorizationController extends AuthenticationController
             $tokens = $this->_generateTokens($userData);
 
             // Проверяем refreshSessions и делаем запись
-            $this->model->RefreshSession($userData, $tokens);
+            $this->model->refreshSession($userData, $tokens);
 
             $this->_response = $tokens;
-
         } catch (AuthException $e) {
             $this->_response = [
                 'error' => $e
             ];
             //echo $e;
         }
+    }
 
 
+    public function refreshTokens()
+    {
+        $user_id = '1';
+        $refreshToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYW55LXNpdGUub3JnIiwiYXVkIjoiaHR0cDovL2FueS1zaXRlLm9yZyIsImlhdCI6MTM1Njk5OTUyNCwibmJmIjoxMzU3MDAwMDAwLCJleHAiOjE2OTA2NDI2MzksImRhdGEiOnsiaWQiOiIxIiwibmFtZSI6Ilx1MDQxOFx1MDQzMlx1MDQzMFx1MDQzZFx1MDQzZVx1MDQzMiBcdTA0MThcdTA0MzJcdTA0MzBcdTA0M2QgXHUwNDE4XHUwNDMyXHUwNDMwXHUwNDNkXHUwNDNlXHUwNDMyXHUwNDM4XHUwNDQ3In19.-JldpIfgswz4u7ezSMN9Ux0YS132np1rzTsJM4FYnFM';
+
+        $data = [
+            'user_id' => $user_id,
+            'refresh_token' => $refreshToken
+        ];
+
+        try {
+            $this->model->checkRefreshSession($data);
+
+            // Получаем данные пользователя из БД
+            $userData = $this->model->getUserData($data['user_id']);
+
+            // Генерируем токены
+            $tokens = $this->_generateTokens($userData);
+
+            // Проверяем refreshSessions и делаем запись
+            $this->model->refreshSession($userData, $tokens);
+
+
+            unset($tokens['expires_in_rt']);
+            $this->_response = $tokens;
+
+        } catch (AuthException $e) {
+            $this->_response = [
+                'error' => $e
+            ];
+        }
+
+
+    }
+
+
+    public function logout()
+    {
+        $user_id = '1';
+        $refreshToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYW55LXNpdGUub3JnIiwiYXVkIjoiaHR0cDovL2FueS1zaXRlLm9yZyIsImlhdCI6MTM1Njk5OTUyNCwibmJmIjoxMzU3MDAwMDAwLCJleHAiOjE2OTA2NDI3MTgsImRhdGEiOnsiaWQiOiIxIiwibmFtZSI6Ilx1MDQxOFx1MDQzMlx1MDQzMFx1MDQzZFx1MDQzZVx1MDQzMiBcdTA0MThcdTA0MzJcdTA0MzBcdTA0M2QgXHUwNDE4XHUwNDMyXHUwNDMwXHUwNDNkXHUwNDNlXHUwNDMyXHUwNDM4XHUwNDQ3In19.kF_-SsJ-Iiq3CBcdS6ZhBtn66poBWp9DHyOufXzj55Y';
+
+
+        $data = [
+            'user_id' => $user_id,
+            'refresh_token' => $refreshToken
+        ];
+
+        try {
+            $this->model->deleteRefreshSession($data);
+
+
+            $this->_response = ['123421'];
+
+        } catch (AuthException $e) {
+            $this->_response = [
+                'error' => $e
+            ];
+        }
+    }
+
+
+    public function validateToken(string $jwt): bool
+    {
+        try {
+            // Декодирование jwt
+            $decoded = JWT::decode($jwt, new Key($this->_key, 'HS256'));
+
+            return true;
+        } catch (ExpiredException $e) {
+            return false;
+        }
     }
 
 
@@ -87,8 +158,8 @@ class AuthorizationController extends AuthenticationController
     {
         $now = new \DateTime('now', new \DateTimeZone('Europe/Moscow'));
 
-        $userData['expireJwt'] = $now->modify('+1 seconds')->getTimestamp();
-        $userData['expireRt'] = $now->modify('+2 seconds')->getTimestamp();
+        $userData['expireJwt'] = $now->modify('+1 minutes')->getTimestamp();
+        $userData['expireRt'] = $now->modify('+2 minutes')->getTimestamp();
 
         $jwt = $this->_generateJwt($userData);
         $rt = $this->_generateRt($userData);
@@ -96,7 +167,8 @@ class AuthorizationController extends AuthenticationController
         $tokens = [
             'access_token' => $jwt,
             'refresh_token' => $rt,
-            'expires_in' => $userData['expireRt'],
+            'expires_in' => $userData['expireJwt'],
+            'expires_in_rt' => $userData['expireRt'],
         ];
 
         return $tokens;
@@ -236,7 +308,7 @@ class AuthorizationController extends AuthenticationController
      * уничтожение сессии
      * @return void
      */
-    public function logout()
+    public function logout2()
     {
 
         if(isset($_SESSION['id_user']) or isset($_COOKIE['id_user'])){

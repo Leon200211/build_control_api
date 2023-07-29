@@ -66,3 +66,63 @@ Fault: 28-07-2023 23:06:49 - Error
 fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
  In line 23
 
+Fault: 29-07-2023 17:44:00 - Нет такой ref
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 102
+
+Fault: 29-07-2023 17:44:13 - Нет такой ref
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 102
+
+Fault: 29-07-2023 17:44:55 - Нет такой ref
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 102
+
+Fault: 29-07-2023 17:54:05 - Нет такой ref
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 103
+
+Fault: 29-07-2023 17:54:49 - Нет такой ref
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 103
+
+Fault: 29-07-2023 17:54:49 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 17:55:46 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 17:57:00 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 17:57:08 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 17:57:17 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 17:57:39 - Нет такой ref
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 102
+
+Fault: 29-07-2023 17:57:39 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 17:58:35 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 29-07-2023 18:06:33 - Нет такой ref
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 129
+
+Fault: 29-07-2023 18:09:48 - Не верное имя файла для подключения - engine/main/authentication/controllers/Key
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
+ In line 35
+
