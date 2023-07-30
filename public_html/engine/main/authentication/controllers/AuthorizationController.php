@@ -77,10 +77,11 @@ class AuthorizationController extends AuthenticationController
             $this->_response = $tokens;
         } catch (EmptyParameterException $parameterException) {
             http_response_code(400);
-            $this->_response = [
+            echo json_encode([
                 'status' => 'error',
                 'error' => $parameterException->getMessage()
-            ];
+            ]);
+            exit();
         } catch (AuthException $authException) {
             http_response_code(401);
             echo json_encode([
