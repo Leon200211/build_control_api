@@ -8,8 +8,17 @@
 define('VG_ACCESS', true);
 //error_reporting(0);
 
-header('Content-Type:text/html;charset=utf-8'); // в какой кодировки пользователь обрабатывает данные (первый заголовок)
-session_start(); //стартуем сессию
+
+$headers = [
+    "Access-Control-Allow-Origin: *",
+    "Access-Control-Allow-Methods: POST, PUT, PATCH, GET, DELETE, OPTIONS",
+    "Access-Control-Allow-Headers: *",
+    "Content-Type:text/html;charset=utf-8",
+];
+foreach ($headers as $header) {
+    header($header);
+}
+
 
 
 // отключаем сообщение о предупреждениях
