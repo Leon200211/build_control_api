@@ -47,6 +47,12 @@ class Settings
             'controller' => 'Authorization',
             'controllerPath' => '\engine\main\authentication\controllers\\',
             'action' => 'logout',
+        ],
+
+        '/api/profile/my' => [
+            'controller' => 'Profile',
+            'controllerPath' => '\engine\main\profile\controllers\\',
+            'action' => 'getMyProfile',
         ]
 
     ];

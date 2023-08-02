@@ -96,3 +96,24 @@ fingerprint - хеш сгенерированный js'ом на базе нек
 ***<span style="color:red">Во всех остальных запросах access_token передается как Bearer</span>***
 
 ### 
+
+
+
+## Профили
+
+## <span style="color:green">**GET**</span> api/profile/my - Метод для получения данных своего профиля
+
+### ***Пример***
+
+Входные данные
+```json
+{
+  "name": "Иванов Иван Иванович",
+  "position": "admin",
+  "info": "Алминистратор",
+  "role": "admin",
+  "phone": "89990000001",
+  "email": "test@test.ru",
+  "profile_img": "iVBORw0KGgoAAAANSUhEUgAABJ0"
+}
+```

@@ -74,6 +74,8 @@ class AuthorizationController extends AuthenticationController
             // Проверяем refreshSessions и делаем запись
             $this->model->refreshSession($userData, $tokens);
 
+            $tokens['id_user'] = $userData['id'];
+
             $this->_response = $tokens;
         } catch (EmptyParameterException $parameterException) {
             http_response_code(400);

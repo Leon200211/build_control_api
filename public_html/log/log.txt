@@ -402,3 +402,63 @@ Fault: 29-07-2023 21:39:20 - INVALID_REFRESH_SESSION
 fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
  In line 168
 
+Fault: 02-08-2023 19:16:51 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 63
+
+Fault: 02-08-2023 19:17:49 - Отсутствует параметр username
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 63
+
+Fault: 02-08-2023 19:21:42 - Отсутствует параметр user_id
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 149
+
+Fault: 02-08-2023 19:21:55 - Отсутствует параметр refresh_token
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 150
+
+Fault: 02-08-2023 19:22:03 - Отсутствует параметр fingerprint
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 151
+
+Fault: 02-08-2023 19:22:15 - INVALID_REFRESH_SESSION
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 168
+
+Fault: 02-08-2023 19:22:25 - Отсутствует параметр user_id
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 106
+
+Fault: 02-08-2023 19:22:41 - Отсутствует параметр fingerprint
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\controllers\AuthorizationController.php
+ In line 108
+
+Fault: 02-08-2023 19:23:10 - INVALID_REFRESH_SESSION
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 168
+
+Fault: 02-08-2023 19:23:46 - INVALID_REFRESH_SESSION
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 137
+
+Fault: 02-08-2023 19:23:53 - INVALID_REFRESH_SESSION
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\authentication\models\MainModel.php
+ In line 137
+
+Fault: 02-08-2023 19:44:05 - Отсутствует параметр access_token
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\profile\controllers\ProfileController.php
+ In line 38
+
+Fault: 02-08-2023 19:44:13 - Отсутствует параметр access_token
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\profile\controllers\ProfileController.php
+ In line 38
+
+Fault: 02-08-2023 20:21:35 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 02-08-2023 20:42:20 - Отсутствует параметр access_token
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\profile\controllers\ProfileController.php
+ In line 39
+

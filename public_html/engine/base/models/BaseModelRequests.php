@@ -61,7 +61,7 @@ trait BaseModelRequests
             'operand' => ['='],
         ])[0]['photo'];
 
-        if (file_exists(USER_PROFILE_IMG . $img)) {
+        if (!empty($img) and file_exists(USER_PROFILE_IMG . $img)) {
             return $img;
         } else {
             return 'default_img_user.png';
