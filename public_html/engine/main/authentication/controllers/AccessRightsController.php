@@ -15,6 +15,7 @@ use engine\main\authentication\libs\php_jwt\Key;
  */
 class AccessRightsController extends AuthenticationController
 {
+
     private string $_key = '1111';
 
     // трейт для паттерна Singleton
@@ -60,13 +61,12 @@ class AccessRightsController extends AuthenticationController
 
 
     /**
-     * метод для проверки доступа к данной странице
+     * Метод для проверки доступа к данной странице
      * @param $url
      * @return bool|void
      */
-    public function accessRightsCheck($url)
+    public function accessRightsCheck($url): bool
     {
-
         // если есть аргументы GET
         if($_SERVER['QUERY_STRING']){
             $url = substr($url, 0, strpos($url, $_SERVER['QUERY_STRING']) - 1);
@@ -80,7 +80,6 @@ class AccessRightsController extends AuthenticationController
         }
 
         $this->redirect('/404');
-
     }
 
 

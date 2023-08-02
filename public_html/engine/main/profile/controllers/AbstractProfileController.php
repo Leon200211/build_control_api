@@ -18,7 +18,7 @@ abstract class AbstractProfileController extends BaseController
     /**
      * @return void
      */
-    protected function inputData()
+    protected function inputData(): void
     {
 
         if(!$this->model) $this->model = MainModel::getInstance();
@@ -32,7 +32,7 @@ abstract class AbstractProfileController extends BaseController
     /**
      * @return void
      */
-    protected function execBase()
+    protected function execBase(): void
     {
         self::inputData();
     }
@@ -42,13 +42,11 @@ abstract class AbstractProfileController extends BaseController
      *  Запрет на кеширование
      * @return void
      */
-    protected function sendNoCacheHeaders()
+    protected function sendNoCacheHeaders(): void
     {
-
         header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
         header("Cache-Control: post-check=0, pre-check=0", false);
         header("Pragma: no-cache");
-
     }
 
 }

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace engine\main\profile\models;
 
 use engine\base\controllers\Singleton;
@@ -8,7 +7,9 @@ use engine\base\exceptions\AuthException;
 use engine\base\models\BaseModel;
 
 
-// основная модель при входе
+/**
+ * Модель для работы с профилями
+ */
 class MainModel extends BaseModel
 {
 
@@ -16,6 +17,12 @@ class MainModel extends BaseModel
     use Singleton;
 
 
+    /**
+     * Метод получения данных пользователя
+     * @param $idUser
+     * @return Array
+     * @throws \Exception
+     */
     public function getUserData($idUser): Array
     {
         $userData = $this->read('users', [
@@ -32,7 +39,5 @@ class MainModel extends BaseModel
 
         return $result;
     }
-
-
 
 }

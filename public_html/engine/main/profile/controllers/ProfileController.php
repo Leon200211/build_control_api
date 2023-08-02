@@ -9,14 +9,17 @@ use engine\base\exceptions\EmptyParameterException;
 use engine\main\profile\models\MainModel;
 
 /**
- * Class AccessRightsController контроллер для проверки прав доступа
+ * Class ProfileController контроллер для работы с профилями
  * @package engine\main\authentication\controllers
  */
 class ProfileController extends AbstractProfileController
 {
 
-    private $_response;
+    private array $_response;
 
+    /**
+     * Конструктор
+     */
     public function __construct()
     {
         $this->execBase();
@@ -24,15 +27,22 @@ class ProfileController extends AbstractProfileController
     }
 
 
+    /**
+     * @return string
+     */
     public function outputData(): string
     {
         http_response_code(200);
         return json_encode($this->_response);
     }
 
-    public function getMyProfile()
-    {
 
+    /**
+     * Метод получения данных моего профиля
+     * @return void
+     */
+    public function getMyProfile(): void
+    {
         try {
 
             $data = [
@@ -64,6 +74,11 @@ class ProfileController extends AbstractProfileController
     }
 
 
+    /**
+     * Метод получения фотографии профиля
+     * @param $img
+     * @return string
+     */
     private function getUserImg($img): string
     {
         if (@file_exists(USER_PROFILE_IMG . $img)) {
