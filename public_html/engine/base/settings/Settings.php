@@ -53,6 +53,24 @@ class Settings
             'controller' => 'Profile',
             'controllerPath' => '\engine\main\profile\controllers\\',
             'action' => 'getMyProfile',
+        ],
+
+
+        '/api/projects' => [
+            'controller' => 'Projects',
+            'controllerPath' => '\engine\modules\residential_complexes\projects\controllers\\',
+            'action' => 'getProjects',
+        ],
+
+        '/api/houses' => [
+            'controller' => 'Houses',
+            'controllerPath' => '\engine\modules\residential_complexes\houses\controllers\\',
+            'action' => 'getHouses',
+        ],
+        '/api/house' => [
+            'controller' => 'House',
+            'controllerPath' => '\engine\modules\residential_complexes\houses\controllers\\',
+            'action' => 'getHouse',
         ]
 
     ];

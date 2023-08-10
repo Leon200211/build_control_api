@@ -18,3 +18,11 @@ Fault: 29-07-2023 21:05:02 - Ошибка в SQL запросе: SELECT users.`i
 fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\models\BaseModel.php
  In line 58
 
+Fault: 10-08-2023 22:21:28 - Ошибка в SQL запросе: SELECT houses.`id`,houses.`house_number`,houses.`title`,houses.`address`,houses.`section_img` FROM houses  WHERE houses.id_projects='1' - 1054 Unknown column 'houses.id_projects' in 'where clause'
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\models\BaseModel.php
+ In line 58
+
+Fault: 10-08-2023 22:41:46 - Ошибка в SQL запросе: SELECT houses.`id`,houses.`id_project`,houses.`house_number`,houses.`title`,houses.`address`,houses.`section_img`,sections.`id` as sections_id,sections.`sections_number` FROM houses  LEFT JOIN sections ON houses.id=sections.id_house WHERE houses.id='id_project' - 1054 Unknown column 'sections.sections_number' in 'field list'
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\models\BaseModel.php
+ In line 58
+

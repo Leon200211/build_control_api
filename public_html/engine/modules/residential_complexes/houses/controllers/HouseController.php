@@ -1,20 +1,12 @@
 <?php
 
+namespace engine\modules\residential_complexes\houses\controllers;
 
-namespace engine\main\profile\controllers;
 
-use engine\base\controllers\BaseController;
-use engine\base\controllers\Singleton;
 use engine\base\exceptions\EmptyParameterException;
-use engine\main\profile\models\MainModel;
 
-/**
- * Class ProfileController контроллер для работы с профилями
- * @package engine\main\authentication\controllers
- */
-class ProfileController extends AbstractProfileController
+class HouseController extends AbstractHousesController
 {
-
     private array $_response;
 
     /**
@@ -37,10 +29,10 @@ class ProfileController extends AbstractProfileController
 
 
     /**
-     * Метод получения данных моего профиля
+     * Метод для получения дома
      * @return void
      */
-    public function getMyProfile(): void
+    public function getHouse()
     {
         try {
             $data = [
@@ -49,11 +41,16 @@ class ProfileController extends AbstractProfileController
             $data['access_token'] = explode(' ', $data['access_token'])[1];
 
             $userId = $this->accessRightsChecker->isAuthorized($data['access_token']);
-            $userData = $this->model->getUserData($userId);
-            $userData['profile_img'] = $this->getUserImg($userData['profile_img']);
 
-            $this->_response = $userData;
+            $data['id_house'] = !empty($_POST['id_house']) ? $this->clearStr($_POST['id_house']) : throw new EmptyParameterException('Отсутствует параметр id_house');
 
+            // получение id проекта
+            $projectId = $this->model->searchProjectByHouse($data['id_house']);
+            // Проверка на доступ к проекту
+
+            $houseData = $this->model->getHouse($data['id_house']);
+
+            $this->_response = $houseData;
         } catch (EmptyParameterException $parameterException) {
             http_response_code(400);
             echo json_encode([
@@ -69,24 +66,6 @@ class ProfileController extends AbstractProfileController
             ]);
             exit();
         }
-    }
-
-
-    /**
-     * Метод получения фотографии профиля
-     * @param $img
-     * @return string
-     */
-    private function getUserImg($img): string
-    {
-        if (@file_exists(USER_PROFILE_IMG . $img)) {
-            $imagedata = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/' . USER_PROFILE_IMG . $img);
-            $base64 = base64_encode($imagedata);
-
-            return $base64;
-        }
-
-        return '';
     }
 
 }

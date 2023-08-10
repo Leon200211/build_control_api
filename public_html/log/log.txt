@@ -462,3 +462,59 @@ Fault: 02-08-2023 20:42:20 - Отсутствует параметр access_toke
 fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\main\profile\controllers\ProfileController.php
  In line 39
 
+Fault: 10-08-2023 16:55:36 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 10-08-2023 21:31:19 - Не верное имя файла для подключения - engine/modules/residential_complexes/projects/controllers/ProjectsController
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
+ In line 35
+
+Fault: 10-08-2023 21:31:37 - Не верное имя файла для подключения - AbstractProjectsController
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
+ In line 35
+
+Fault: 10-08-2023 21:33:00 - Method engine\modules\residential_complexes\projects\controllers\ProjectsController::request() does not exist
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\BaseController.php
+ In line 72
+
+Fault: 10-08-2023 21:34:51 - Method engine\modules\residential_complexes\projects\controllers\ProjectsController::request() does not exist
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\BaseController.php
+ In line 72
+
+Fault: 10-08-2023 21:54:31 - Не верное имя файла для подключения - engine/modules/residential_complexes/models/MainModel
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
+ In line 35
+
+Fault: 10-08-2023 21:54:54 - Не верное имя файла для подключения - engine/modules/residential_complexes/models/MainModel
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\settings\internal_settings.php
+ In line 35
+
+Fault: 10-08-2023 22:20:26 - Отсутствует параметр access_token
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\modules\residential_complexes\houses\controllers\HousesController.php
+ In line 39
+
+Fault: 10-08-2023 22:21:04 - Отсутствует параметр project_id
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\modules\residential_complexes\houses\controllers\HousesController.php
+ In line 47
+
+Fault: 10-08-2023 22:21:17 - Отсутствует параметр project_id
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\modules\residential_complexes\houses\controllers\HousesController.php
+ In line 47
+
+Fault: 10-08-2023 22:38:08 - Отсутствует параметр access_token
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\modules\residential_complexes\houses\controllers\HousesController.php
+ In line 39
+
+Fault: 10-08-2023 22:38:30 - Отсутствует параметр id_house
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\modules\residential_complexes\houses\controllers\HouseController.php
+ In line 40
+
+Fault: 10-08-2023 22:38:57 - Отсутствует параметр id_house
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\modules\residential_complexes\houses\controllers\HouseController.php
+ In line 40
+
+Fault: 10-08-2023 22:48:50 - Отсутствует параметр id_house
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\modules\residential_complexes\houses\controllers\HouseController.php
+ In line 45
+
