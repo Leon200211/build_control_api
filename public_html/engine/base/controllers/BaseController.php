@@ -48,7 +48,7 @@ abstract class BaseController
 
 
     /**
-     * метод для переадресации
+     * Метод для переадресации
      * @return void
      * @throws RouteException
      */
@@ -76,7 +76,22 @@ abstract class BaseController
 
 
     /**
-     * метод для работы с запросом
+     * @param string $key
+     * @return string
+     */
+    public function getFromHeader(string $key): string
+    {
+        foreach (getallheaders() as $name => $value) {
+            if ($key === $name) {
+                return $value;
+            }
+        }
+
+        return '';
+    }
+
+    /**
+     * Метод для работы с запросом
      * @param $args
      * @return void
      */
@@ -108,7 +123,7 @@ abstract class BaseController
 
 
     /**
-     * генератор шаблонов
+     * Генератор шаблонов
      * @param $path
      * @param $parameters
      * @return false|string
@@ -146,7 +161,7 @@ abstract class BaseController
 
 
     /**
-     * отображение страницы
+     * Отображение страницы
      * @return void
      */
     protected function getPage()
@@ -164,7 +179,7 @@ abstract class BaseController
 
 
     /**
-     * метод инициализации стилей и скриптов
+     * Метод инициализации стилей и скриптов
      * @param $admin
      * @return void
      */

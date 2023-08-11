@@ -47,6 +47,42 @@ class Settings
             'controller' => 'Authorization',
             'controllerPath' => '\engine\main\authentication\controllers\\',
             'action' => 'logout',
+        ],
+
+        '/api/profile/my' => [
+            'controller' => 'Profile',
+            'controllerPath' => '\engine\main\profile\controllers\\',
+            'action' => 'getMyProfile',
+        ],
+
+
+        '/api/projects' => [
+            'controller' => 'Projects',
+            'controllerPath' => '\engine\modules\residential_complexes\projects\controllers\\',
+            'action' => 'getProjects',
+        ],
+
+        '/api/houses' => [
+            'controller' => 'Houses',
+            'controllerPath' => '\engine\modules\residential_complexes\houses\controllers\\',
+            'action' => 'getHouses',
+        ],
+        '/api/house' => [
+            'controller' => 'House',
+            'controllerPath' => '\engine\modules\residential_complexes\houses\controllers\\',
+            'action' => 'getHouse',
+        ],
+
+        '/api/section' => [
+            'controller' => 'Section',
+            'controllerPath' => '\engine\modules\residential_complexes\sections\controllers\\',
+            'action' => 'getSection',
+        ],
+
+        '/api/floor' => [
+            'controller' => 'Floor',
+            'controllerPath' => '\engine\modules\residential_complexes\floors\controllers\\',
+            'action' => 'getFloor',
         ]
 
     ];
