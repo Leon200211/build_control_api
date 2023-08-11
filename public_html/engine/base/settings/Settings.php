@@ -71,6 +71,12 @@ class Settings
             'controller' => 'House',
             'controllerPath' => '\engine\modules\residential_complexes\houses\controllers\\',
             'action' => 'getHouse',
+        ],
+
+        '/api/sections' => [
+            'controller' => 'Sections',
+            'controllerPath' => '\engine\modules\residential_complexes\sections\controllers\\',
+            'action' => 'getSections',
         ]
 
     ];

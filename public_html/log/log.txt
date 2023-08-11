@@ -518,3 +518,7 @@ Fault: 10-08-2023 22:48:50 - Отсутствует параметр id_house
 fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\modules\residential_complexes\houses\controllers\HouseController.php
  In line 45
 
+Fault: 11-08-2023 22:03:47 - Отсутствует параметр id_house
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\modules\residential_complexes\sections\controllers\SectionsController.php
+ In line 40
+
