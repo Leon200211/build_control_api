@@ -522,3 +522,15 @@ Fault: 11-08-2023 22:03:47 - Отсутствует параметр id_house
 fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\modules\residential_complexes\sections\controllers\SectionsController.php
  In line 40
 
+Fault: 11-08-2023 22:23:14 - Не найден контроллер
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\controllers\RouteController.php
+ In line 59
+
+Fault: 11-08-2023 22:36:35 - Отсутствует параметр access_token
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\modules\residential_complexes\floors\controllers\FloorController.php
+ In line 34
+
+Fault: 11-08-2023 22:36:56 - Отсутствует параметр id_floor
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\modules\residential_complexes\floors\controllers\FloorController.php
+ In line 40
+

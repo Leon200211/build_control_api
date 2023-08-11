@@ -17,22 +17,45 @@ class MainModel extends BaseModel
 
 
     /**
-     * Метод для получения секций
+     * Метод для получения секции
      * @param $id_house
      * @return array
      */
-    public function getSections($id_house): array
+    public function getSection($idSection): array
     {
         $sections = $this->read('sections', [
            'fields' => ['id', 'section_number'],
-           'where' => ['id_house' => $id_house]
+           'where' => ['id' => $idSection]
         ]);
 
         if (empty($sections)) {
             return array();
         }
+        $sections = $sections[0];
+
+        $sections['floor'] = $this->__getFloors($idSection);
 
         return $sections;
+    }
+
+
+    /**
+     * Метод получения всех этажей
+     * @param $idSection
+     * @return array
+     */
+    private function __getFloors($idSection): array
+    {
+        $floor = $this->read('floors', [
+           'fields' => ['id', 'floor_number'],
+           'where' => ['id_section' => $idSection]
+        ]);
+
+        if (empty($floor)) {
+            return array();
+        }
+
+        return $floor;
     }
 
 }

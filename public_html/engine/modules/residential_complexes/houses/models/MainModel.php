@@ -23,20 +23,42 @@ class MainModel extends BaseModel
      */
     public function getHouses($idProject): array
     {
-        $housesData = $this->read('houses', [
+        $housesData['project'] = $this->__getProject($idProject);
+
+        $housesData['houses'] = $this->read('houses', [
            'fields' => ['id', 'house_number', 'title', 'address', 'section_img'],
            'where' => ['id_project' => $idProject]
         ]);
-
-        if (empty($housesData)) {
-            return array();
-        }
 
         return $housesData;
     }
 
 
+    /**
+     * Метод для получения проекта
+     * @param $idProject
+     * @return array
+     */
+    private function __getProject($idProject): array
+    {
+        $projectInfo = $this->read('projects', [
+            'fields' => ['id', 'project_number', 'title', 'address', 'img'],
+            'where' => ['id' => $idProject]
+        ]);
 
+        if (empty($projectInfo)) {
+            return array();
+        }
+
+        return $projectInfo[0];
+    }
+
+
+    /**
+     * Метод для получения дома
+     * @param $idHouse
+     * @return array
+     */
     public function getHouse($idHouse): array
     {
         $housesData = $this->read('houses', [
@@ -50,12 +72,18 @@ class MainModel extends BaseModel
             $housesData = $housesData[0];
         }
 
-        $housesData['sections'] = $this->__getSectionByHouse($idHouse);
+        $housesData['sections'] = $this->__getSectionsByHouse($idHouse);
 
         return $housesData;
     }
 
-    private function __getSectionByHouse($idHouse): array
+
+    /**
+     * Метод получения секций дома
+     * @param $idHouse
+     * @return array
+     */
+    private function __getSectionsByHouse($idHouse): array
     {
         $sections = $this->read('sections', [
             'fields' => ['id', 'section_number'],

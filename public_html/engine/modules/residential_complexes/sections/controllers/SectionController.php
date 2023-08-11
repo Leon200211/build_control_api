@@ -4,7 +4,7 @@ namespace engine\modules\residential_complexes\sections\controllers;
 
 use engine\base\exceptions\EmptyParameterException;
 
-class SectionsController extends AbstractSectionsController
+class SectionController extends AbstractSectionsController
 {
     private array $_response;
 
@@ -27,7 +27,11 @@ class SectionsController extends AbstractSectionsController
     }
 
 
-    public function getSections()
+    /**
+     * Метод получения информации по сеции
+     * @return void
+     */
+    public function getSection(): void
     {
         try {
             $data = [
@@ -37,13 +41,13 @@ class SectionsController extends AbstractSectionsController
 
             $userId = $this->accessRightsChecker->isAuthorized($data['access_token']);
 
-            $data['id_house'] = !empty($_POST['id_house']) ? $this->clearStr($_POST['id_house']) : throw new EmptyParameterException('Отсутствует параметр id_house');
+            $data['id_section'] = !empty($_POST['id_section']) ? $this->clearStr($_POST['id_section']) : throw new EmptyParameterException('Отсутствует параметр id_house');
 
 
             // Проверка какие проекты можно выдавать нашему пользователю
-            $sectionsData = $this->model->getSections($data['id_house']);
+            $sectionData = $this->model->getSection($data['id_section']);
 
-            $this->_response = $sectionsData;
+            $this->_response = $sectionData;
         } catch (EmptyParameterException $parameterException) {
             http_response_code(400);
             echo json_encode([

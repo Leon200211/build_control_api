@@ -26,3 +26,7 @@ Fault: 10-08-2023 22:41:46 - Ошибка в SQL запросе: SELECT houses.`
 fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\models\BaseModel.php
  In line 58
 
+Fault: 11-08-2023 22:23:56 - Ошибка в SQL запросе: SELECT floor.`id`,floor.`floor_number`,floor.`floor_plan_img` FROM floor  WHERE floor.id_section='1' - 1146 Table 'interactive-monitoring-platform.floor' doesn't exist
+fileD:\my_data\sites\domains\build_control_api\build_control_api\public_html\engine\base\models\BaseModel.php
+ In line 58
+
