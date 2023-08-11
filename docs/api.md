@@ -156,22 +156,31 @@ project_id - id проекта в системе
 
 Выходные данные
 ```json
-[
-  {
-    "id": "6",
-    "house_number": "10006",
-    "title": "Жилой комплекс Рублевский Квартал к.58",
-    "address": "Жилой комплекс Рублевский Квартал к.58",
-    "section_img": "-"
+{
+  "project": {
+    "id": "3",
+    "project_number": "102",
+    "title": "Рублевский Квартал",
+    "address": "Рублевский Квартал",
+    "img": "rublyovka.jpg"
   },
-  {
-    "id": "7",
-    "house_number": "10007",
-    "title": "Жилой комплекс Рублевский Квартал к.59",
-    "address": "Жилой комплекс Рублевский Квартал к.59",
-    "section_img": "-"
-  }
-]
+  "houses": [
+    {
+      "id": "6",
+      "house_number": "10006",
+      "title": "Жилой комплекс Рублевский Квартал к.58",
+      "address": "Жилой комплекс Рублевский Квартал к.58",
+      "section_img": "-"
+    },
+    {
+      "id": "7",
+      "house_number": "10007",
+      "title": "Жилой комплекс Рублевский Квартал к.59",
+      "address": "Жилой комплекс Рублевский Квартал к.59",
+      "section_img": "-"
+    }
+  ]
+}
 ```
 
 
@@ -204,3 +213,65 @@ house_id - id дома в системе
 }
 ```
 
+## <span style="color:#347FC4">**POST**</span> api/section - Метод для получения информации по секции
+
+### ***Пример***
+Входные данные
+
+id_section - id секции в системе
+
+Выходные данные
+```json
+{
+  "id": "1",
+  "section_number": "1",
+  "floor": [
+    {
+      "id": "1",
+      "floor_number": "2",
+      "floor_plan_img": "mytishchi_house_1_section_1.png"
+    },
+    {
+      "id": "2",
+      "floor_number": "3",
+      "floor_plan_img": "mytishchi_house_1_section_1.png"
+    },
+    {
+      "id": "3",
+      "floor_number": "4",
+      "floor_plan_img": "mytishchi_house_1_section_1.png"
+    }
+  ]
+}
+```
+
+
+## <span style="color:#347FC4">**POST**</span> api/floor - Метод для получения информации по этажу
+
+### ***Пример***
+Входные данные
+
+id_floor - id этажа в системе
+
+Выходные данные
+```json
+{
+  "id": "1",
+  "floor_number": "2",
+  "floor_plan_img": "mytishchi_house_1_section_1.png",
+  "apartments": [
+    {
+      "id": "1",
+      "apartment_number": "1"
+    },
+    {
+      "id": "2",
+      "apartment_number": "2"
+    },
+    {
+      "id": "3",
+      "apartment_number": "3"
+    }
+  ]
+}
+```
