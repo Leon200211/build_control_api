@@ -15,47 +15,52 @@ class MainModel extends BaseModel
     // трейт для паттерна Singleton
     use Singleton;
 
+    private $__apartmentParamets = ['sockets', 'switches', 'toilet', 'sink', 'bath', 'floor_finishing',
+        'draft_floor_department', 'ceiling_finishing', 'draft_ceiling_finish', 'wall_finishing', 'draft_wall_finish',
+        'windowsill', 'kitchen', 'slopes', 'doors', 'wall_plaster', 'trash', 'radiator', 'floor_plaster',
+        'ceiling_plaster', 'windows'];
+
 
     /**
-     * Метод для получения всех домов по ЖК
-     * @param $idProject
+     * Метод получения информации по квартире
+     * @param $idApartment
      * @return array
      */
-    public function getFloor($idFloor): array
+    public function getApartmentData($idApartment): array
     {
-        $floorData = $this->read('floors', [
-           'fields' => ['id', 'floor_number', 'floor_plan_img'],
-           'where' => ['id' => $idFloor]
+        $apartmentInfo = $this->read('apartments', [
+            'fields' => ['id', 'apartment_number', 'sockets', 'switches', 'toilet', 'sink', 'bath', 'floor_finishing',
+                         'draft_floor_department', 'ceiling_finishing', 'draft_ceiling_finish', 'wall_finishing', 'draft_wall_finish',
+                         'windowsill', 'kitchen', 'slopes', 'doors', 'wall_plaster', 'trash', 'radiator', 'floor_plaster',
+                         'ceiling_plaster', 'windows'],
+            'where' => ['id' => $idApartment]
         ]);
 
-        if (empty($floorData)) {
+        if (empty($apartmentInfo)) {
             return array();
         }
-        $floorData = $floorData[0];
 
-        $floorData['apartments'] = $this->__getApartments($idFloor);
-
-        return $floorData;
+        return $apartmentInfo[0];
     }
 
 
-    /**
-     * Метод для получения проекта
-     * @param $idProject
-     * @return array
-     */
-    private function __getApartments($idFloor): array
+    public function editApartmentData($idApartment, $data): bool
     {
-        $apartmentsInfo = $this->read('apartments', [
-            'fields' => ['id', 'apartment_number'],
-            'where' => ['id_floor' => $idFloor]
-        ]);
+        $fields = [];
 
-        if (empty($apartmentsInfo)) {
-            return array();
+        foreach ($data as $key => $value) {
+            if (in_array($key, $this->__apartmentParamets)) {
+                $fields[$key] = trim(strip_tags($value));
+            }
         }
 
-        return $apartmentsInfo;
+        $this->update('apartments', [
+           'fields' => $fields,
+           'where' => ['id' => $idApartment]
+        ]);
+
+        return true;
+
     }
 
 }
