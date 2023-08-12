@@ -275,3 +275,82 @@ id_floor - id этажа в системе
   ]
 }
 ```
+
+
+
+## <span style="color:#347FC4">**POST**</span> api/apartment - Метод для получения информации по квартире
+
+### ***Пример***
+Входные данные
+
+id_apartment - id квартиры в системе
+
+Выходные данные
+```json
+{
+  "id": "1",
+  "apartment_number": "1",
+  "sockets": "",
+  "switches": "",
+  "toilet": "0",
+  "sink": "",
+  "bath": "0",
+  "floor_finishing": "",
+  "draft_floor_department": "",
+  "ceiling_finishing": "",
+  "draft_ceiling_finish": "",
+  "wall_finishing": "",
+  "draft_wall_finish": "",
+  "windowsill": "",
+  "kitchen": "3",
+  "slopes": "",
+  "doors": "",
+  "wall_plaster": "",
+  "trash": "0",
+  "radiator": "",
+  "floor_plaster": "",
+  "ceiling_plaster": "1",
+  "windows": "10"
+}
+```
+
+
+
+## <span style="color:#347FC4">**POST**</span> api/apartment/edit - Метод для изменения информации по квартире
+
+### ***Пример***
+Входные данные
+
+```json
+{
+  "id_apartment": "1",
+  "sockets": "",
+  "switches": "",
+  "toilet": "0",
+  "sink": "",
+  "bath": "0",
+  "floor_finishing": "",
+  "draft_floor_department": "",
+  "ceiling_finishing": "",
+  "draft_ceiling_finish": "",
+  "wall_finishing": "",
+  "draft_wall_finish": "",
+  "windowsill": "",
+  "kitchen": "3",
+  "slopes": "",
+  "doors": "",
+  "wall_plaster": "",
+  "trash": "0",
+  "radiator": "",
+  "floor_plaster": "",
+  "ceiling_plaster": "1",
+  "windows": "10"
+}
+```
+
+Выходные данные
+```json
+{
+  "status": "success"
+}
+```

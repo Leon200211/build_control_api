@@ -83,6 +83,17 @@ class Settings
             'controller' => 'Floor',
             'controllerPath' => '\engine\modules\residential_complexes\floors\controllers\\',
             'action' => 'getFloor',
+        ],
+
+        '/api/apartment' => [
+            'controller' => 'Apartment',
+            'controllerPath' => '\engine\modules\residential_complexes\apartments\controllers\\',
+            'action' => 'getApartmentInfo',
+        ],
+        '/api/apartment/edit' => [
+            'controller' => 'Apartment',
+            'controllerPath' => '\engine\modules\residential_complexes\apartments\controllers\\',
+            'action' => 'editApartmentInfo',
         ]
 
     ];
